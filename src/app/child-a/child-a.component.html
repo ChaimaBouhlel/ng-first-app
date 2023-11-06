@@ -1,0 +1,7 @@
+<p>child-a works!</p>
+<div bind-hidden="show"  [style.background-color]="color" class="my-div">{{color}}</div>
+<button on-click="changeAppearance()"> {{action}}</button>
+<input type="text"  class="form-control" [(ngModel)]="color" >
+
+<div class="my-div" [style.background-color]="childFavoriteColor"> another div, color:  {{childFavoriteColor || "not yet"}}</div>
+<app-grand-child [color]="color" (applyColorEmitter)="applyColor($event)"></app-grand-child>

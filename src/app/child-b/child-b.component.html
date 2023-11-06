@@ -1,0 +1,11 @@
+<h2>Child B</h2>
+<h2>set div color with event binding</h2>
+<div [style.background-color]="color" >
+  Child B div
+</div>
+
+<input
+#inputColor
+(change)="changeColor(inputColor)"
+type="text"
+>
